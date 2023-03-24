@@ -7,19 +7,18 @@
         mc:Ignorable="d"
         Title="شکن" Height="225" Width="573" ResizeMode="NoResize" Icon="/assets/schecan-icon.png" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Image Margin="187,10,10,0" Source="/assets/logo_title.png" Height="113" VerticalAlignment="Top"/>
-        <Grid Margin="0,0,0,33" Background="#FFFFEECA" Height="26" VerticalAlignment="Bottom">
+        <Image Margin="137,10,10,0" Source="/assets/logo_title.png" Height="121" VerticalAlignment="Top"/>
+        <Grid x:Name="GridStatus" Margin="0,0,0,33" Background="#FFFFEECA" Height="26" VerticalAlignment="Bottom">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="68"/>
             </Grid.ColumnDefinitions>
-            <Label Content="وضعیت: " FlowDirection="RightToLeft" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
-            <Label x:Name="LabelStatus" Content="در حال بررسی .. " FlowDirection="RightToLeft" VerticalContentAlignment="Center" Margin="156,0,0,0" />
+            <Label x:Name="LabelStatusSubject" Content="وضعیت: " FlowDirection="RightToLeft" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Background="{x:Null}" Foreground="#FF0A0909"/>
+            <Label x:Name="LabelStatus" Content="در حال بررسی .. " FlowDirection="RightToLeft" VerticalContentAlignment="Center" Margin="156,0,0,0" Foreground="#FF0A0909" />
         </Grid>
-        <Button x:Name="BtnAction" Content="در حال بررسی .." Margin="10,90,441,0" FlowDirection="RightToLeft" BorderBrush="#FFFFDB8B" FontWeight="Bold" Height="29" VerticalAlignment="Top" Background="{x:Null}" FontSize="11"/>
-        <Label x:Name="LabelCopyRight" Content="- Copyright Jalal Jaleh 2023" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="164" Foreground="#FFC5C5C5" FontFamily="Consolas" Height="21" FontSize="10" MouseDown="LabelCopyright_MouseDown" Cursor="Hand" Margin="2,0,0,2"/>
-        <Label x:Name="LabelShecan" Content="|  وب سایت شکن" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="92" Height="28" FontSize="10" MouseDown="LabelShecan_MouseDown" Cursor="Hand" Foreground="#FF906262"/>
-        <Label x:Name="LabelDeveloper" Content="توسعه دهنده" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="65" Height="28" FontSize="10" MouseDown="LabelDeveloper_MouseDown" Cursor="Hand" RenderTransformOrigin="0.607,1.695" Foreground="#FF906262" Margin="0,0,87,0"/>
+        <Button x:Name="BtnAction" Content="در حال بررسی .." Margin="10,0,0,68" FlowDirection="RightToLeft" BorderBrush="{x:Null}" FontWeight="Bold" Height="26" VerticalAlignment="Bottom" Background="#FFFFEECA" FontSize="11" HorizontalAlignment="Left" Width="122"/>
+        <Label x:Name="LabelCopyRight" Content=" «طراحی و توسعه»" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="102" Foreground="#FFB7AA8F" FontFamily="Consolas" Height="26" FontSize="10" MouseDown="LabelCopyright_MouseDown" Cursor="Hand" VerticalContentAlignment="Center" Padding="0,0,0,5" Margin="2,0,0,2"/>
+        <Label x:Name="LabelShecan" Content="  «وب سایت شکن»" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="92" Height="28" FontSize="10" MouseDown="LabelShecan_MouseDown" Cursor="Hand" Foreground="#FFB7AA8F" Margin="0,0,0,1"/>
 
     </Grid>
 </Window>

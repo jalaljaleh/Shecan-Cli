@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Shecan_Desktop
 {
@@ -26,7 +17,7 @@ namespace Shecan_Desktop
         {
             InitializeComponent();
 
-            this.BtnAction.IsEnabled= false;
+            this.BtnAction.IsEnabled = false;
             this.BtnAction.Click += BtnAction_Click;
 
             this.Loaded += MainWindow_Initialized;
@@ -53,11 +44,17 @@ namespace Shecan_Desktop
             {
                 this.LabelStatus.Content = "سرویس شکن با موفقیت متصل است. !";
                 this.BtnAction.Content = "غیر فعال کردن";
+                this.GridStatus.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C9867"));
+                this.LabelStatus.Foreground = Brushes.White;
+                this.LabelStatusSubject.Foreground = Brushes.White;
             }
             else
             {
                 this.LabelStatus.Content = "شکن فعال نیست.";
                 this.BtnAction.Content = "فعال کردن";
+                this.GridStatus.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFFFEECA"));
+                this.LabelStatus.Foreground = Brushes.Black;
+                this.LabelStatusSubject.Foreground = Brushes.Black;
             }
         }
         private void BtnAction_Click(object sender, RoutedEventArgs e)
